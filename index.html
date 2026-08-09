@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unsung Heroes Club</title>
+  <style>
+    :root{
+      --cream:#fffaf4;
+      --pink:#f6dfe3;
+      --rose:#c97888;
+      --dark:#3d3033;
+      --soft:#fff;
+      --shadow:0 14px 40px rgba(80,45,55,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color:var(--dark);
+      background:var(--cream);
+      line-height:1.6;
+    }
+    nav{
+      position:fixed;top:0;left:0;right:0;z-index:10;
+      display:flex;justify-content:space-between;align-items:center;
+      padding:18px 7%;
+      background:rgba(255,250,244,.88);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(201,120,136,.12);
+    }
+    .brand{font-weight:800;letter-spacing:.02em}
+    nav a{color:var(--dark);text-decoration:none;margin-left:24px;font-size:.92rem}
+    .hero{
+      min-height:100vh;padding:150px 7% 80px;
+      display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;
+    }
+    .eyebrow{
+      display:inline-block;background:var(--pink);color:#8b5260;
+      padding:7px 14px;border-radius:999px;font-size:.78rem;font-weight:800;
+      text-transform:uppercase;letter-spacing:.12em;margin-bottom:18px;
+    }
+    h1{font-size:clamp(3.3rem,8vw,7rem);line-height:.9;letter-spacing:-.065em;margin-bottom:24px}
+    .hero p{font-size:1.15rem;max-width:620px;color:#66565a}
+    .buttons{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+    .btn{
+      display:inline-block;padding:13px 20px;border-radius:999px;text-decoration:none;
+      font-weight:750;border:1px solid var(--rose);transition:.2s;
+    }
+    .primary{background:var(--rose);color:white}
+    .secondary{color:var(--rose);background:transparent}
+    .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+    .pfp-wrap{display:flex;justify-content:center}
+    .pfp{
+      width:min(430px,78vw);aspect-ratio:1;border-radius:50%;
+      background:white;border:10px solid white;box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .pfp img{width:100%;height:100%;display:block;object-fit:cover}
+    section{padding:95px 7%}
+    .section-title{font-size:2.6rem;letter-spacing:-.04em;margin-bottom:16px}
+    .intro{max-width:700px;color:#66565a;margin-bottom:38px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{
+      background:var(--soft);padding:30px;border-radius:26px;box-shadow:var(--shadow);
+      border:1px solid rgba(201,120,136,.09);
+    }
+    .icon{font-size:1.8rem;margin-bottom:15px}
+    .card h3{margin-bottom:8px;font-size:1.2rem}
+    .card p{color:#6b5d61}
+    .about{
+      background:#f8e8eb;
+      display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center;
+    }
+    .quote{
+      font-size:clamp(2rem,4vw,3.5rem);line-height:1.05;
+      letter-spacing:-.045em;font-weight:800;
+    }
+    .join{
+      text-align:center;background:var(--dark);color:white;
+    }
+    .join p{color:#e8dfe1;max-width:600px;margin:0 auto 28px}
+    footer{padding:28px 7%;text-align:center;font-size:.85rem;color:#806f74}
+    @media(max-width:800px){
+      nav{padding:16px 5%}
+      nav a{margin-left:12px}
+      .hero,.about{grid-template-columns:1fr}
+      .hero{padding:130px 6% 70px}
+      section{padding:70px 6%}
+      .cards{grid-template-columns:1fr}
+      h1{font-size:4.2rem}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="brand">unsung heroes club 💌</div>
+    <div>
+      <a href="#about">about</a>
+      <a href="#impact">impact</a>
+      <a href="#join">join us</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">student-led • service • appreciation</div>
+        <h1>celebrate the people who care.</h1>
+        <p>
+          Unsung Heroes Club is a student-led community service club dedicated to
+          recognizing, appreciating, and supporting the people who make a difference
+          in our school, healthcare system, and community — even when they don't
+          always receive the recognition they deserve.
+        </p>
+        <div class="buttons">
+          <a class="btn primary" href="#join">get involved</a>
+          <a class="btn secondary" href="#about">learn more</a>
+        </div>
+      </div>
+
+      <div class="pfp-wrap">
+        <div class="pfp">
+          <img src="pfp.png" alt="Unsung Heroes Club logo">
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="eyebrow">our mission</div>
+      <h2 class="section-title">small acts. meaningful impact.</h2>
+      <p class="intro">
+        We believe appreciation should be more than a feeling — it should be an action.
+        Through thoughtful projects and service, our members create moments of
+        recognition for people who quietly make our communities better every day.
+      </p>
+
+      <div class="cards" id="impact">
+        <div class="card">
+          <div class="icon">💌</div>
+          <h3>handwritten cards</h3>
+          <p>Share genuine words of appreciation with people who deserve to feel seen and valued.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🌷</div>
+          <h3>appreciation campaigns</h3>
+          <p>Create school-wide moments that celebrate the everyday heroes around us.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🤝</div>
+          <h3>service projects</h3>
+          <p>Turn kindness into action through meaningful projects and community partnerships.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="quote">“everyone deserves to know their impact matters.”</div>
+      <div>
+        <div class="eyebrow">who we recognize</div>
+        <h2 class="section-title">the people behind the scenes.</h2>
+        <p class="intro">
+          From school staff and healthcare workers to community members and everyday
+          helpers, Unsung Heroes Club shines a light on people whose kindness,
+          dedication, and hard work often happen quietly.
+        </p>
+      </div>
+    </section>
+
+    <section class="join" id="join">
+      <div class="eyebrow">make a difference</div>
+      <h2 class="section-title">want to be part of it?</h2>
+      <p>
+        Join us in making appreciation a habit, kindness a community,
+        and service something that reaches beyond recognition.
+      </p>
+      <a class="btn primary" href="mailto:yourclubemail@example.com">contact the club</a>
+    </section>
+  </main>
+
+  <footer>
+    unsung heroes club 💌 · student-led community service
+  </footer>
+</body>
+</html>
